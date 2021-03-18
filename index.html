@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="title">Awesome Timer</h1>
+        <div class="inputsContainer">
+            <input class="inputBox" id="hrsInput" type="text" name="hrsInput" placeholder="HH" />
+            <input class="inputBox" id="minInput" type="text" name="minInput" placeholder="MM" />
+            <input class="inputBox" id="secInput" type="text" name="secInput" placeholder="SS" />
+        </div>
+        <div class="timerContainer">
+            <p id="hrs" class="digit">00:</p>
+            <p id="min" class="digit">00:</p>
+            <p id="sec" class="digit">00</p>
+        </div>
+        <div class="buttonContainer">
+            <button id="start" class="btn">Start</button>
+            <button id="stop" class="btn hidden">Stop</button>
+            <button id="pause" class="btn hidden">Pause</button>
+            <button id="continue" class="btn hidden">Continue</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
