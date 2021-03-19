@@ -25,9 +25,9 @@ body {
     flex-direction: column;
     align-items: center;
     width: 85%;
-    background: rgb(45, 113, 134);
+    background: linear-gradient(360deg, #e7dcb9, #3973f1);
     border-radius: 30px;
-    border: 5px solid rgb(10, 176, 206);
+    border: 3px solid #e4e2db;
     padding: 1em;
 }
 
