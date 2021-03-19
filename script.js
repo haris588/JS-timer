@@ -17,7 +17,6 @@ let intervalId
 let totalSeconds = 0
 
 function timer() {
-
   // converting seconds logic
   let hrs = Math.floor(totalSeconds / 3600)
   let min = Math.floor(totalSeconds / 60)
@@ -36,7 +35,6 @@ function timer() {
     btnStart.classList.add('hidden')
     btnStop.classList.remove('hidden')
     btnPause.classList.remove('hidden')
-
   }
 
   // when the timer stops
@@ -60,7 +58,6 @@ function timer() {
 
 function stop() {
   clearInterval(intervalId)
-
 
   btnStop.classList.add('hidden')
   btnPause.classList.add('hidden')
@@ -98,6 +95,12 @@ function unpause() {
   btnPause.classList.remove('hidden')
 }
 
+// start the timer
+function startTimer() {
+  clearInterval(intervalId)
+  intervalId = setInterval(timer, 1000)
+}
+
 // event listeners, getting total second value
 minInput.addEventListener('change', (e) => {
   totalSeconds += Math.floor(parseInt(e.target.value * 60))
@@ -111,8 +114,8 @@ hrsInput.addEventListener('change', (e) => {
   totalSeconds += Math.floor(parseInt(e.target.value * 3600))
 })
 
-// calling the Timer() function every second when the "start" button is clicked
-btnStart.addEventListener('click', () => intervalId = setInterval(timer, 1000))
+// calling the startTimer() function when the "start" button is clicked
+btnStart.addEventListener('click', startTimer)
 
 btnStop.addEventListener('click', stop)
 
